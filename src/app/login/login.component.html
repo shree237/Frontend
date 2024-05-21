@@ -1,0 +1,22 @@
+
+  
+<div class="user-auth">
+
+  <div class="login-form">
+
+      <h1 class="form-title">Login</h1>
+
+      <form class="common-form" #loginform="ngForm" (ngSubmit)="loginForm(loginform.value)">
+        
+          <input type="email" class="form-input" name="email" [(ngModel)]="email" placeholder="Enter Email here">
+          <input type="password" class="form-input" name="password" [(ngModel)]="password" placeholder="Enter Password">
+          <button type="submit" class="form-button">Login</button>
+
+          <div class="mt-4">
+          <a routerLink="/signup" style="text-decoration: none;">Dont have Account ? <span class="text-danger">Sign up</span></a>
+          </div>
+
+          
+      </form>
+  </div>
+</div>

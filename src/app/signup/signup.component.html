@@ -1,0 +1,21 @@
+
+  <div class="user-auth">
+    <div class="signup-form">
+  
+        <h1 class="form-title">Sign Up</h1>
+  
+        <form class="common-form" #signupform="ngForm" (ngSubmit)="registerForm(signupform.value)">
+            <label>Username</label>
+            <input type="text" class="form-input" name="uname" required [(ngModel)]="name">
+            <label>Email</label>
+            <input type="email" class="form-input" name="email" [(ngModel)]="email" >
+            <label>Password</label>
+            <input type="password" class="form-input" name="password" [(ngModel)]="password">
+            <button type="submit" class="form-button">Sign up</button>
+
+            <div class="mt-4">
+                <a routerLink="/login" style="text-decoration: none;">Already Account ? <span class="text-danger">Login</span></a>
+            </div>          
+        </form>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+
+<div class="user-auth">
+    <div class="signup-form">
+        <h1 class="form-title">Add Expense</h1>
+        <hr>
+  
+        <form class="common-form" #expenseform="ngForm" (ngSubmit)="addExpense(expenseform.value)">
+            
+            <label>Amount</label>
+            <input type="number" class="form-input" name="amount" required placeholder="Enter Amount" [(ngModel)]="amount">
+            
+            
+            <select name="category" class="form-input" [(ngModel)]="category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Rent">Rent</option>
+                <option value="Bill">Bill</option>
+                <option value="Electricity">Electricity</option>
+                <option value="Travel">Travel</option>
+                <option value="Wifi">Wifi</option>
+            </select>
+            
+            <label>Comments</label>
+            <textarea class="form-input" name="comments" rows="3" cols="35" placeholder="Comments (Optional)" [(ngModel)]="comments"></textarea>
+            
+            <button type="submit" class="btn btn-primary btn-lg" [disabled]="!expenseform.valid">Add Expense</button>
+        </form>
+    </div>
+</div>
